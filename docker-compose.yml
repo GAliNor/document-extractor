@@ -1,0 +1,16 @@
+services:
+  ocr-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ocr-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app
+    environment:
+      - ENVIRONMENT=development
+      - MAX_FILE_SIZE_MB=10
+      - API_KEY=${API_KEY:-}
+    mem_limit: 4g
+    restart: unless-stopped

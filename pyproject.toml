@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "ocr-backend"
+version = "1.0.0"
+description = "OCR Backend API for extracting text from images and PDFs"
+authors = ["Ali Guedda"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+uvicorn = { extras = ["standard"], version = "^0.27.0" }
+python-multipart = "^0.0.6"
+pydantic = "^2.5.3"
+pydantic-settings = "^2.1.0"
+python-dotenv = "^1.0.0"
+easyocr = "^1.7.1"
+pdf2image = "^1.17.0"
+Pillow = "^10.2.0"
+numpy = "^1.26.3"
+docling = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+httpx = "^0.27.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
